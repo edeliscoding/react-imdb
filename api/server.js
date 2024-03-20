@@ -6,6 +6,7 @@ const cors = require("cors");
 const app = express();
 const path = require("path");
 
+require("dotenv").config({ path: path.resolve(__dirname, "./.env") });
 // const __dirname = path.resolve();
 dbConnect();
 
@@ -14,7 +15,7 @@ app.use(cors());
 
 app.use("/api", movieRoutes);
 
-// console.log(__dirname);
+console.log(__dirname);
 app.use(express.static(path.join(__dirname, "..", "client", "build")));
 
 app.get("*", (req, res) => {
