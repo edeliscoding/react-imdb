@@ -25,7 +25,7 @@ router.get("/movies", async (req, res) => {
       "Music",
       "Family",
     ];
-
+    console.log(typeof genre);
     genre === "All"
       ? (genre = [...genreOptions])
       : (genre = req.query.genre.split(","));

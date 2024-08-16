@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use("/api", movieRoutes);
 
-console.log(__dirname);
+// console.log(__dirname);
 app.use(express.static(path.join(__dirname, "..", "client", "build")));
 
 app.get("*", (req, res) => {
